@@ -405,6 +405,12 @@ function closeDD() {
 }
 
 document.addEventListener("click", function(e) {
+  var capEl = e.target.closest(".has-cap");
+  if (capEl) {
+    var label = capEl.dataset.cap || capEl.textContent.trim();
+    showCapModal(label);
+    return;
+  }
   if (!e.target.closest("#navbar")) closeDD();
 });
 
@@ -414,16 +420,6 @@ function ddb(label, tier) {
   var attr = has ? " data-cap=" + JSON.stringify(label) : "";
   return "<span class=" + JSON.stringify(cls) + attr + ">" + label + "</span>";
 }
-
-// Single delegated click handler for all dd-b badges
-document.addEventListener("click", function(e) {
-  var el = e.target.closest(".has-cap");
-  if (el) {
-    e.stopPropagation();
-    var label = el.dataset.cap || el.textContent.trim();
-    showCapModal(label);
-  }
-});
 
 function hoverDD(key) {
   currentHover = key;
