@@ -8,6 +8,56 @@
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0d1f35;color:#e8edf2;min-height:100vh;}
 
+/* INLINE SOLUTION PANEL */
+.sol-inline{display:none;max-width:1100px;margin:0 auto 60px;padding:0 40px;}
+.sol-inline.visible{display:block;}
+.sol-inline-inner{background:#0f2540;border:1px solid rgba(255,255,255,0.1);border-radius:12px;overflow:hidden;display:grid;grid-template-columns:200px 1fr 1fr;}
+.sol-left-nav{background:#071828;padding:12px 0;border-right:1px solid rgba(255,255,255,0.07);}
+.sol-left-nav .snav-header{font-size:9px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.3);padding:0 12px 8px;}
+.snav-item{display:flex;align-items:center;gap:8px;padding:8px 12px;cursor:pointer;border-left:3px solid transparent;transition:background 0.15s;}
+.snav-item:hover{background:rgba(255,255,255,0.05);}
+.snav-item.active{background:rgba(22,84,131,0.3);border-left-color:#4a9fd4;}
+.snav-item .snav-icon{width:22px;height:22px;border-radius:5px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.snav-item .snav-icon svg{width:11px;height:11px;}
+.snav-item .snav-label{font-size:11px;font-weight:500;color:rgba(255,255,255,0.65);line-height:1.3;}
+.snav-item.active .snav-label{color:#fff;}
+.sol-mid{padding:20px;border-right:1px solid rgba(255,255,255,0.07);display:flex;flex-direction:column;gap:12px;}
+.sol-mid .s-eyebrow{font-size:9px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#4a9fd4;}
+.sol-mid .s-title{font-size:16px;font-weight:700;color:#fff;line-height:1.3;}
+.sol-mid .s-desc{font-size:12px;color:rgba(255,255,255,0.6);line-height:1.65;}
+.sol-mid .s-divider{height:1px;background:rgba(255,255,255,0.08);}
+.sol-mid .s-outcome-label{font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:6px;}
+.sol-mid .s-outcome-item{display:flex;align-items:flex-start;gap:6px;margin-bottom:6px;}
+.sol-mid .s-outcome-dot{width:4px;height:4px;border-radius:50%;background:#4a9fd4;margin-top:5px;flex-shrink:0;}
+.sol-mid .s-outcome-text{font-size:11px;color:rgba(255,255,255,0.55);line-height:1.5;}
+.sol-mid .s-tlink{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:500;color:#4a9fd4;cursor:pointer;background:none;border:none;padding:4px 0;margin-top:6px;}
+.sol-mid .s-tlink:hover{text-decoration:underline;}
+.sol-mid .s-tlink svg{width:11px;height:11px;}
+.sol-right{padding:16px;}
+.sol-right .sr-section{margin-bottom:12px;}
+.sol-right .sr-header{display:flex;align-items:center;gap:6px;margin-bottom:6px;}
+.sol-right .sr-pill{font-size:9px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;padding:2px 8px;border-radius:20px;color:#fff;}
+.sol-right .sr-pill.n{background:#8c1a23;}
+.sol-right .sr-pill.o{background:#0e3a5c;}
+.sol-right .sr-pill.m{background:#3a3d40;}
+.sol-right .sr-sub{font-size:9px;color:rgba(255,255,255,0.35);}
+.sol-right .sr-badges{display:flex;flex-wrap:wrap;gap:4px;}
+.sol-right .sr-badge{font-size:9px;padding:2px 6px;border-radius:3px;font-weight:500;line-height:1.5;}
+.sol-right .sr-badge.key-n{background:rgba(191,36,49,0.25);color:#f5a0a7;border:1px solid rgba(191,36,49,0.4);}
+.sol-right .sr-badge.key-o{background:rgba(22,84,131,0.3);color:#85b7eb;border:1px solid rgba(22,84,131,0.5);}
+.sol-right .sr-badge.key-m{background:rgba(118,124,127,0.25);color:#c0c3c5;border:1px solid rgba(118,124,127,0.4);}
+.sol-right .sr-badge.sup-n{background:transparent;color:rgba(245,160,167,0.6);border:1px solid rgba(191,36,49,0.25);}
+.sol-right .sr-badge.sup-o{background:transparent;color:rgba(133,183,235,0.6);border:1px solid rgba(22,84,131,0.3);}
+.sol-right .sr-badge.sup-m{background:transparent;color:rgba(192,195,197,0.5);border:1px solid rgba(118,124,127,0.25);}
+.sol-right .sr-divider{height:1px;background:rgba(255,255,255,0.06);margin:10px 0;}
+.sol-right .sr-legend{display:flex;gap:10px;flex-wrap:wrap;padding-top:6px;}
+.sol-right .sr-legend-item{display:flex;align-items:center;gap:4px;font-size:9px;color:rgba(255,255,255,0.3);}
+.sol-right .sr-legend-dot{width:6px;height:6px;border-radius:1px;}
+.sol-right .sr-legend-outline{width:6px;height:6px;border-radius:1px;border:1px solid rgba(255,255,255,0.3);}
+.sol-close-bar{display:flex;justify-content:flex-end;padding:0 40px 8px;max-width:1100px;margin:0 auto;}
+.sol-close-btn{background:none;border:none;font-size:11px;color:rgba(255,255,255,0.4);cursor:pointer;display:flex;align-items:center;gap:4px;padding:4px 0;}
+.sol-close-btn:hover{color:#fff;}
+
 /* NAV */
 .topbar{background:#071828;padding:6px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,0.06);}
 .topbar-left{display:flex;align-items:center;gap:24px;font-size:11px;color:rgba(255,255,255,0.5);}
@@ -29,19 +79,28 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .nav-cta:hover{background:#1d6ba0;}
 
 /* DROPDOWN */
-.dropdown{position:absolute;top:60px;left:0;right:0;background:#0a1929;border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08);display:none;padding:24px 40px;z-index:300;}
-.dropdown.visible{display:flex;gap:40px;}
-.dd-col{min-width:180px;}
-.dd-col-title{font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:12px;}
-.dd-item{font-size:13px;color:rgba(255,255,255,0.7);padding:6px 0;cursor:pointer;display:flex;align-items:center;gap:8px;transition:color 0.15s;}
-.dd-item:hover{color:#fff;}
-.dd-item-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0;}
-.dd-divider{width:1px;background:rgba(255,255,255,0.08);align-self:stretch;}
-.dd-featured{background:rgba(22,84,131,0.2);border-radius:8px;padding:16px;min-width:220px;}
-.dd-featured-title{font-size:13px;font-weight:700;color:#fff;margin-bottom:6px;}
-.dd-featured-desc{font-size:12px;color:rgba(255,255,255,0.55);line-height:1.5;margin-bottom:12px;}
-.dd-featured-btn{font-size:11px;font-weight:600;color:#4a9fd4;background:none;border:none;cursor:pointer;padding:0;}
-.dd-featured-btn:hover{text-decoration:underline;}
+.dropdown{position:absolute;top:60px;left:0;right:0;background:#0d1f35;border-top:1px solid rgba(255,255,255,0.08);display:none;z-index:300;box-shadow:0 8px 32px rgba(0,0,0,0.4);}
+.dropdown.visible{display:flex;}
+.dd-left{background:#071828;width:220px;flex-shrink:0;padding:16px 0;}
+.dd-left-title{font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.3);padding:0 16px 10px;}
+.dd-item{display:flex;align-items:center;gap:10px;padding:10px 16px;cursor:pointer;transition:background 0.15s;border-left:3px solid transparent;font-size:13px;color:rgba(255,255,255,0.7);}
+.dd-item:hover,.dd-item.dd-active{background:rgba(22,84,131,0.3);border-left-color:#4a9fd4;color:#fff;}
+.dd-item-icon{width:26px;height:26px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.dd-item-icon svg{width:13px;height:13px;}
+.dd-right{flex:1;padding:20px 24px;display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start;}
+.dd-card{background:#0f2540;border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:20px;cursor:pointer;transition:border-color 0.15s;display:flex;flex-direction:column;gap:10px;}
+.dd-card:hover{border-color:rgba(255,255,255,0.25);}
+.dd-card-eyebrow{font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#4a9fd4;margin-bottom:2px;}
+.dd-card-title{font-size:15px;font-weight:700;color:#fff;}
+.dd-card-desc{font-size:12px;color:rgba(255,255,255,0.55);line-height:1.6;flex:1;}
+.dd-card-arrow{width:28px;height:28px;background:rgba(255,255,255,0.08);border-radius:6px;display:flex;align-items:center;justify-content:center;align-self:flex-end;}
+.dd-card-arrow svg{width:14px;height:14px;}
+.dd-cta-card{background:rgba(22,84,131,0.15);border:1px solid rgba(22,84,131,0.3);border-radius:10px;padding:20px;display:flex;flex-direction:column;gap:8px;}
+.dd-cta-title{font-size:14px;font-weight:700;color:#fff;}
+.dd-cta-desc{font-size:12px;color:rgba(255,255,255,0.5);line-height:1.5;}
+.dd-cta-link{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:#4a9fd4;background:none;border:none;cursor:pointer;padding:0;margin-top:4px;}
+.dd-cta-link:hover{text-decoration:underline;}
+.dd-cta-link svg{width:12px;height:12px;}
 
 /* PAGES */
 .page{display:none;}
@@ -236,28 +295,47 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 
   <!-- Solutions dropdown -->
   <div class="dropdown" id="solutions-dd">
-    <div class="dd-col">
-      <div class="dd-col-title">By Outcome</div>
-      <div class="dd-item" onclick="goSolution('continuity')"><span class="dd-item-dot" style="background:#BF2431"></span>Business Continuity</div>
-      <div class="dd-item" onclick="goSolution('secure')"><span class="dd-item-dot" style="background:#165483"></span>Secure Network</div>
-      <div class="dd-item" onclick="goSolution('workforce')"><span class="dd-item-dot" style="background:#165483"></span>Modern Workforce</div>
-      <div class="dd-item" onclick="goSolution('multilocation')"><span class="dd-item-dot" style="background:#165483"></span>Multi-Location Management</div>
-      <div class="dd-item" onclick="goSolution('cloud')"><span class="dd-item-dot" style="background:#165483"></span>Cloud Performance</div>
-      <div class="dd-item" onclick="goSolution('voice')"><span class="dd-item-dot" style="background:#767C7F"></span>Voice Modernization</div>
+    <div class="dd-left">
+      <div class="dd-left-title">Solutions</div>
+      <div class="dd-item dd-active" onmouseover="setDDCard('continuity')" onclick="goSolution('continuity')">
+        <div class="dd-item-icon" style="background:rgba(191,36,49,0.15)"><svg viewBox="0 0 16 16" fill="none" stroke="#f5a0a7" stroke-width="1.5"><path d="M8 2v4l3 2M3 4.5A6 6 0 1 0 8 2"/><path d="M2 2v3h3"/></svg></div>
+        Business Continuity
+      </div>
+      <div class="dd-item" onmouseover="setDDCard('secure')" onclick="goSolution('secure')">
+        <div class="dd-item-icon" style="background:rgba(22,84,131,0.2)"><svg viewBox="0 0 16 16" fill="none" stroke="#85b7eb" stroke-width="1.5"><path d="M8 2L3 4v4c0 3 2.5 5 5 6 2.5-1 5-3 5-6V4z"/></svg></div>
+        Secure Network
+      </div>
+      <div class="dd-item" onmouseover="setDDCard('workforce')" onclick="goSolution('workforce')">
+        <div class="dd-item-icon" style="background:rgba(22,84,131,0.2)"><svg viewBox="0 0 16 16" fill="none" stroke="#85b7eb" stroke-width="1.5"><circle cx="6" cy="5" r="2.5"/><path d="M1 13c0-3 2-4 5-4s5 1 5 4"/><circle cx="12" cy="5" r="2"/><path d="M14 13c0-2-1-3-2-3"/></svg></div>
+        Modern Workforce
+      </div>
+      <div class="dd-item" onmouseover="setDDCard('multilocation')" onclick="goSolution('multilocation')">
+        <div class="dd-item-icon" style="background:rgba(22,84,131,0.2)"><svg viewBox="0 0 16 16" fill="none" stroke="#85b7eb" stroke-width="1.5"><circle cx="8" cy="8" r="6"/><path d="M2 8h12M8 2c-2 2-3 4-3 6s1 4 3 6M8 2c2 2 3 4 3 6s-1 4-3 6"/></svg></div>
+        Multi-Location Management
+      </div>
+      <div class="dd-item" onmouseover="setDDCard('cloud')" onclick="goSolution('cloud')">
+        <div class="dd-item-icon" style="background:rgba(22,84,131,0.2)"><svg viewBox="0 0 16 16" fill="none" stroke="#85b7eb" stroke-width="1.5"><path d="M12 10a3 3 0 0 0-3-3 4 4 0 0 0-7.5 1.5A2.5 2.5 0 0 0 3.5 13H12a2 2 0 0 0 0-4z"/></svg></div>
+        Cloud Performance
+      </div>
+      <div class="dd-item" onmouseover="setDDCard('voice')" onclick="goSolution('voice')">
+        <div class="dd-item-icon" style="background:rgba(118,124,127,0.2)"><svg viewBox="0 0 16 16" fill="none" stroke="#c0c3c5" stroke-width="1.5"><path d="M3 3l2 2-1.5 2L6 9.5l2-1.5 2 2-2 2.5C4 13.5 2.5 9 3 3z"/><path d="M10 2s2 1 3 3-1 4-1 4"/></svg></div>
+        Voice Modernization
+      </div>
     </div>
-    <div class="dd-divider"></div>
-    <div class="dd-col">
-      <div class="dd-col-title">By Service</div>
-      <div class="dd-item" onclick="showStackDetail('network')"><span class="dd-item-dot" style="background:#BF2431"></span>Network Services</div>
-      <div class="dd-item" onclick="showStackDetail('overlay')"><span class="dd-item-dot" style="background:#165483"></span>Overlay Services</div>
-      <div class="dd-item" onclick="showStackDetail('overlay')"><span class="dd-item-dot" style="background:#165483"></span>Security Suite</div>
-      <div class="dd-item" onclick="showStackDetail('managed')"><span class="dd-item-dot" style="background:#767C7F"></span>Managed Services</div>
-    </div>
-    <div class="dd-divider"></div>
-    <div class="dd-featured">
-      <div class="dd-featured-title">One Team. One STACK.</div>
-      <div class="dd-featured-desc">One unified platform for connectivity, cloud, and management — built to simplify, scale, and perform.</div>
-      <button class="dd-featured-btn" onclick="showPage('stack')">Explore the full stack &#8594;</button>
+    <div class="dd-right" id="dd-right">
+      <div class="dd-card" id="dd-main-card" onclick="goSolution('continuity')">
+        <div>
+          <div class="dd-card-eyebrow" id="dd-card-eyebrow">Customer Outcome</div>
+          <div class="dd-card-title" id="dd-card-title">Business Continuity</div>
+        </div>
+        <div class="dd-card-desc" id="dd-card-desc">Keeps customers connected and operational during outages using diverse transport paths, automatic failover, and 24/7 managed oversight.</div>
+        <div class="dd-card-arrow"><svg viewBox="0 0 14 14" fill="none" stroke="white" stroke-width="1.5"><path d="M3 7h8M7 3l4 4-4 4"/></svg></div>
+      </div>
+      <div class="dd-cta-card">
+        <div class="dd-cta-title">Not sure where to start?</div>
+        <div class="dd-cta-desc">Talk to our team and we'll help you find the right solution for your business.</div>
+        <button class="dd-cta-link">Talk to our team <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M6 2l4 4-4 4"/></svg></button>
+      </div>
     </div>
   </div>
 </div>
@@ -336,79 +414,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
   </div>
 </div>
 
-<!-- PAGE: SOLUTIONS -->
-<div class="page" id="page-solutions">
-  <div class="sol-shell">
-    <div class="left-nav">
-      <div class="nav-section-header">Solutions</div>
-      <div class="sol-nav-item active" id="sol-li-continuity" onclick="showSolution('continuity',this)">
-        <div class="nav-icon" style="background:rgba(191,36,49,0.2)"><svg viewBox="0 0 16 16" fill="none" stroke="#f5a0a7" stroke-width="1.5"><path d="M8 2v4l3 2M3 4.5A6 6 0 1 0 8 2"/><path d="M2 2v3h3"/></svg></div>
-        <span class="nav-label">Business Continuity</span>
-      </div>
-      <div class="sol-nav-item" id="sol-li-secure" onclick="showSolution('secure',this)">
-        <div class="nav-icon" style="background:rgba(22,84,131,0.2)"><svg viewBox="0 0 16 16" fill="none" stroke="#85b7eb" stroke-width="1.5"><path d="M8 2L3 4v4c0 3 2.5 5 5 6 2.5-1 5-3 5-6V4z"/></svg></div>
-        <span class="nav-label">Secure Network</span>
-      </div>
-      <div class="sol-nav-item" id="sol-li-workforce" onclick="showSolution('workforce',this)">
-        <div class="nav-icon" style="background:rgba(22,84,131,0.2)"><svg viewBox="0 0 16 16" fill="none" stroke="#85b7eb" stroke-width="1.5"><circle cx="6" cy="5" r="2.5"/><path d="M1 13c0-3 2-4 5-4s5 1 5 4"/><circle cx="12" cy="5" r="2"/><path d="M14 13c0-2-1-3-2-3"/></svg></div>
-        <span class="nav-label">Modern Workforce</span>
-      </div>
-      <div class="sol-nav-item" id="sol-li-multilocation" onclick="showSolution('multilocation',this)">
-        <div class="nav-icon" style="background:rgba(22,84,131,0.2)"><svg viewBox="0 0 16 16" fill="none" stroke="#85b7eb" stroke-width="1.5"><circle cx="8" cy="8" r="6"/><path d="M2 8h12M8 2c-2 2-3 4-3 6s1 4 3 6M8 2c2 2 3 4 3 6s-1 4-3 6"/></svg></div>
-        <span class="nav-label">Multi-Location</span>
-      </div>
-      <div class="sol-nav-item" id="sol-li-cloud" onclick="showSolution('cloud',this)">
-        <div class="nav-icon" style="background:rgba(22,84,131,0.2)"><svg viewBox="0 0 16 16" fill="none" stroke="#85b7eb" stroke-width="1.5"><path d="M12 10a3 3 0 0 0-3-3 4 4 0 0 0-7.5 1.5A2.5 2.5 0 0 0 3.5 13H12a2 2 0 0 0 0-4z"/></svg></div>
-        <span class="nav-label">Cloud Performance</span>
-      </div>
-      <div class="sol-nav-item" id="sol-li-voice" onclick="showSolution('voice',this)">
-        <div class="nav-icon" style="background:rgba(118,124,127,0.2)"><svg viewBox="0 0 16 16" fill="none" stroke="#c0c3c5" stroke-width="1.5"><path d="M3 3l2 2-1.5 2L6 9.5l2-1.5 2 2-2 2.5C4 13.5 2.5 9 3 3z"/><path d="M10 2s2 1 3 3-1 4-1 4"/></svg></div>
-        <span class="nav-label">Voice Modernization</span>
-      </div>
-      <div class="nav-divider"></div>
-      <div class="stack-nav-item" onclick="showPage('stack')">
-        <div class="nav-icon" style="background:rgba(74,159,212,0.1)"><svg viewBox="0 0 16 16" fill="none" stroke="#4a9fd4" stroke-width="1.5"><rect x="2" y="3" width="12" height="3" rx="1"/><rect x="2" y="7" width="12" height="3" rx="1"/><rect x="2" y="11" width="12" height="3" rx="1"/></svg></div>
-        <span class="nav-label">View our Stack</span>
-      </div>
-    </div>
-    <div class="mid-panel">
-      <div><div class="mid-eyebrow" id="sol-eyebrow"></div><div class="mid-title" id="sol-title"></div></div>
-      <div class="mid-desc" id="sol-desc"></div>
-      <div class="mid-divider"></div>
-      <div>
-        <div class="outcome-label">This solution delivers</div>
-        <div id="sol-outcomes"></div>
-        <button class="testimonial-link" onclick="showTestimonials()">
-          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h12v9H2zM5 3V1.5h6V3"/><path d="M5 7h6M5 9.5h4"/></svg>
-          See customer testimonials
-        </button>
-      </div>
-    </div>
-    <div class="right-panel">
-      <div class="stack-section-r">
-        <div class="stack-header-r"><span class="stack-pill n">Network</span><span class="stack-sub-r">Connects</span></div>
-        <div class="badges" id="sol-network-key"></div>
-        <div class="badges" style="margin-top:5px" id="sol-network-sup"></div>
-      </div>
-      <div class="stack-divider-r"></div>
-      <div class="stack-section-r">
-        <div class="stack-header-r"><span class="stack-pill o">Overlay</span><span class="stack-sub-r">Enables</span></div>
-        <div class="badges" id="sol-overlay-key"></div>
-        <div class="badges" style="margin-top:5px" id="sol-overlay-sup"></div>
-      </div>
-      <div class="stack-divider-r"></div>
-      <div class="stack-section-r">
-        <div class="stack-header-r"><span class="stack-pill m">Managed</span><span class="stack-sub-r">Assures Outcomes</span></div>
-        <div class="badges" id="sol-managed-key"></div>
-        <div class="badges" style="margin-top:5px" id="sol-managed-sup"></div>
-      </div>
-      <div class="right-legend">
-        <div class="legend-item"><div class="legend-dot" style="background:rgba(191,36,49,0.5)"></div>Key capability</div>
-        <div class="legend-item"><div class="legend-outline"></div>Supporting</div>
-      </div>
-    </div>
-  </div>
-</div>
+<!-- INLINE SOLUTION PANEL (lives on home page) -->
 
 <!-- PAGE: STACK OVERVIEW -->
 <div class="page" id="page-stack">
@@ -494,12 +500,22 @@ var solData={
   voice:{eyebrow:'Voice Modernization',title:'Replace legacy, embrace cloud voice',desc:'Replaces aging PRI, analog, and POTS infrastructure with cloud-based voice, SIP trunking, and Teams-integrated calling — fully managed through transition and beyond.',outcomes:['Eliminate copper POTS and PRI circuits','Teams-integrated enterprise calling','Managed number porting and carrier cutover'],networkKey:['Analog & PRI Replacement','POTS Replacement / FLS'],networkSup:[],overlayKey:['SIP Trunking','VoIP Calling','Teams Calling'],overlaySup:['Number Reputation Mgmt','UCaaS'],managedKey:['Vendor & Carrier Management','Commercial & Billing Assurance'],managedSup:['Monitoring & Observability','Customer Experience & Service Visibility'],testimonials:[{quote:"NHC handled our entire PRI cutover across 12 sites without a single dropped call during business hours.",name:'Steve F.',title:'VP of IT, Hospitality Group',initials:'SF',color:'#8c1a23'},{quote:"We eliminated $4,200/month in legacy POTS lines and moved everything to SIP trunking.",name:'Dana C.',title:'CFO, Regional Healthcare Provider',initials:'DC',color:'#0e3a5c'}]}
 };
 
+function setDDCard(key){
+  var s=solData[key];if(!s)return;
+  document.getElementById('dd-card-eyebrow').textContent='Customer Outcome';
+  document.getElementById('dd-card-title').textContent=s.title;
+  document.getElementById('dd-card-desc').textContent=s.desc;
+  document.getElementById('dd-main-card').setAttribute('onclick',"goSolution('"+key+"')");
+  document.querySelectorAll('.dd-item').forEach(function(el){el.classList.remove('dd-active');});
+  event.currentTarget.classList.add('dd-active');
+}
+
 function showPage(p){
   document.querySelectorAll('.page').forEach(function(el){el.classList.remove('active');});
-  document.getElementById('page-'+p).classList.add('active');
+  var pg=document.getElementById('page-'+p);
+  if(pg) pg.classList.add('active');
   closeDropdowns();
-  if(p==='solutions'){showSolution(currentSolution,document.getElementById('sol-li-'+currentSolution));}
-  window.scrollTo(0,0);
+  if(p!=='home') window.scrollTo(0,0);
 }
 
 function showStackDetail(tier){
@@ -508,7 +524,39 @@ function showStackDetail(tier){
 
 function goSolution(key){
   currentSolution=key;
-  showPage('solutions');
+  showSolInline(key, document.getElementById('snav-'+key));
+  showPage('home');
+  closeDropdowns();
+  setTimeout(function(){
+    var el=document.getElementById('sol-inline');
+    if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+  },100);
+}
+
+function showSolInline(key, el){
+  currentSolution=key;
+  var s=solData[key];
+  document.getElementById('si-eyebrow').textContent=s.eyebrow;
+  document.getElementById('si-title').textContent=s.title;
+  document.getElementById('si-desc').textContent=s.desc;
+  document.getElementById('si-outcomes').innerHTML=s.outcomes.map(function(o){return '<div class="s-outcome-item"><div class="s-outcome-dot"></div><div class="s-outcome-text">'+o+'</div></div>';}).join('');
+  function sb(l,t){return '<span class="sr-badge '+t+'">'+l+'</span>';}
+  document.getElementById('si-net-key').innerHTML=s.networkKey.map(function(l){return sb(l,'key-n');}).join('');
+  document.getElementById('si-net-sup').innerHTML=s.networkSup.map(function(l){return sb(l,'sup-n');}).join('');
+  document.getElementById('si-ov-key').innerHTML=s.overlayKey.map(function(l){return sb(l,'key-o');}).join('');
+  document.getElementById('si-ov-sup').innerHTML=s.overlaySup.map(function(l){return sb(l,'sup-o');}).join('');
+  var allMKey=coreManaged.concat(s.managedKey);
+  document.getElementById('si-mg-key').innerHTML=allMKey.map(function(l){return sb(l,'key-m');}).join('');
+  document.getElementById('si-mg-sup').innerHTML=s.managedSup.map(function(l){return sb(l,'sup-m');}).join('');
+  document.querySelectorAll('.snav-item').forEach(function(n){n.classList.remove('active');});
+  if(el) el.classList.add('active');
+  document.getElementById('sol-inline').classList.add('visible');
+  document.getElementById('sol-close-bar').style.display='flex';
+}
+
+function closeSolInline(){
+  document.getElementById('sol-inline').classList.remove('visible');
+  document.getElementById('sol-close-bar').style.display='none';
 }
 
 function toggleDropdown(id){
@@ -528,23 +576,7 @@ document.addEventListener('click',function(e){
 
 function badge(l,t){return '<span class="badge '+t+'">'+l+'</span>';}
 
-function showSolution(key,el){
-  currentSolution=key;
-  var s=solData[key];
-  document.getElementById('sol-eyebrow').textContent=s.eyebrow;
-  document.getElementById('sol-title').textContent=s.title;
-  document.getElementById('sol-desc').textContent=s.desc;
-  document.getElementById('sol-outcomes').innerHTML=s.outcomes.map(function(o){return '<div class="outcome-item"><div class="outcome-dot"></div><div class="outcome-text">'+o+'</div></div>';}).join('');
-  document.getElementById('sol-network-key').innerHTML=s.networkKey.map(function(l){return badge(l,'key-n');}).join('');
-  document.getElementById('sol-network-sup').innerHTML=s.networkSup.map(function(l){return badge(l,'sup-n');}).join('');
-  document.getElementById('sol-overlay-key').innerHTML=s.overlayKey.map(function(l){return badge(l,'key-o');}).join('');
-  document.getElementById('sol-overlay-sup').innerHTML=s.overlaySup.map(function(l){return badge(l,'sup-o');}).join('');
-  var allMKey=coreManaged.concat(s.managedKey);
-  document.getElementById('sol-managed-key').innerHTML=allMKey.map(function(l){return badge(l,'key-m');}).join('');
-  document.getElementById('sol-managed-sup').innerHTML=s.managedSup.map(function(l){return badge(l,'sup-m');}).join('');
-  document.querySelectorAll('.sol-nav-item').forEach(function(n){n.classList.remove('active');});
-  if(el)el.classList.add('active');
-}
+
 
 function showCapPopup(key){
   var d=capData[key];if(!d)return;
