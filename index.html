@@ -409,18 +409,21 @@ document.addEventListener("click", function(e) {
 });
 
 function ddb(label, tier) {
-  var span = document.createElement("span");
-  span.className = "dd-b " + tier;
-  span.textContent = label;
-  if (capData[label]) {
-    span.classList.add("has-cap");
-    span.addEventListener("click", function(e) {
-      e.stopPropagation();
-      showCapModal(label);
-    });
-  }
-  return span.outerHTML;
+  var has = !!capData[label];
+  var cls = "dd-b " + tier + (has ? " has-cap" : "");
+  var attr = has ? " data-cap=" + JSON.stringify(label) : "";
+  return "<span class=" + JSON.stringify(cls) + attr + ">" + label + "</span>";
 }
+
+// Single delegated click handler for all dd-b badges
+document.addEventListener("click", function(e) {
+  var el = e.target.closest(".has-cap");
+  if (el) {
+    e.stopPropagation();
+    var label = el.dataset.cap || el.textContent.trim();
+    showCapModal(label);
+  }
+});
 
 function hoverDD(key) {
   currentHover = key;
